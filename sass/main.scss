@@ -1,0 +1,431 @@
+// ------ VARIABLES ------ //
+$color-white: hsl(0, 0%, 100%);
+$color-black: hsl(0, 0%, 0%);
+$color-dark-gray: hsl(0, 0%, 55%);
+$color-very-dark-gray: hsl(0, 0%, 41%);
+$u-margin-big: 9rem;
+
+// ------ MIXINS ------ //
+@mixin clearfix {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+// ------ BASIC SETUP ------ //
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 93.75%; /* 15px / 16px (default) => 93,75% / defines what 1rem is */
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+  letter-spacing: 0.10625rem;
+}
+
+.row {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 3rem;
+}
+
+.mobile {
+  display: none !important;
+}
+
+.desktop {
+  display: block;
+}
+
+.notVisible {
+  display: none !important;
+}
+
+.visible {
+  display: block !important;
+}
+
+// ------ HEADER ------ //
+.header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/desktop/image-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  color: $color-white;
+  padding-top: 5rem;
+  padding-bottom: 1rem;
+
+  &__textbox {
+    text-transform: uppercase;
+    font-size: 4rem;
+    margin: $u-margin-big 0;
+    border: 2px solid $color-white;
+    width: 35rem;
+    padding: 2rem;
+  }
+}
+
+.nav {
+  &__ul {
+    list-style: none;
+    overflow: hidden;
+  }
+
+  &__li {
+    &--logo {
+      float: left;
+    }
+
+    &--text {
+      display: inline-block;
+      margin-top: 0.5rem;
+    }
+  }
+
+  &__box {
+    float: right;
+  }
+
+  &__a {
+    text-decoration: none;
+    color: $color-white;
+    margin-left: 1rem;
+    transition: all 0.5s;
+    padding-bottom: 0.2rem;
+
+    &:hover {
+      border-bottom: 2px solid $color-white;
+    }
+  }
+}
+
+// ------ SECTION INFO ------ //
+.section-info {
+  margin: $u-margin-big 0;
+
+  &__box {
+    position: relative;
+  }
+
+  &__image {
+    height: auto;
+    max-width: 100%;
+  }
+
+  &__textbox {
+    background-color: $color-white;
+    padding: 4rem 0rem 0rem 4rem;
+    position: absolute;
+    bottom: 0rem;
+    right: 3rem;
+    height: auto;
+    max-width: 40%;
+  }
+
+  &__heading {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+
+  &__paragraph {
+    line-height: 1.4rem;
+    font-family: "Alata", sans-serif;
+    color: $color-dark-gray;
+    font-size: 0.7rem;
+  }
+}
+
+// ------ SECTION CREATIONS ------ //
+.section-creations {
+  margin-bottom: $u-margin-big;
+
+  &__heading {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    display: inline-block;
+  }
+}
+
+.btn {
+  float: right;
+  text-decoration: none;
+  color: $color-black;
+  padding: 13px 30px 10px 30px;
+  border: 1px solid $color-black;
+  transition: all 0.5s;
+  text-transform: uppercase;
+
+  &:hover {
+    color: $color-white;
+    background-color: $color-black;
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.5rem 1.5rem;
+}
+
+.grid {
+  &__element {
+    position: relative;
+    transition: all 0.3s;
+
+    &:hover {
+      .grid__text {
+        color: $color-black;
+      }
+    }
+  }
+
+  &__image {
+    height: auto;
+    max-width: 100%;
+    transition: all 0.3s;
+    filter: brightness(50%);
+
+    &:hover {
+      filter: grayscale(30%);
+      opacity: 0.3;
+    }
+  }
+
+  &__text {
+    color: $color-white;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 2.5rem;
+    left: 2.5rem;
+    pointer-events: none;
+    transition: all 0.3s;
+  }
+}
+
+// ------ FOOTER ------ //
+.footer {
+  padding: 3rem 0;
+  background-color: $color-black;
+  color: $color-white;
+}
+
+.social-box {
+  float: right;
+
+  &__icons {
+    display: inline-block;
+    margin-left: 1rem;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 0.3rem;
+  }
+}
+
+.footer-linksrow {
+  padding-top: 2rem;
+  font-size: 0.8rem;
+}
+
+.footer-links {
+  display: inline-block;
+  margin-right: 1rem;
+  text-decoration: none;
+  color: $color-white;
+  border-bottom: 2px solid transparent;
+  transition: all 0.5s;
+  padding-bottom: 0.2rem;
+
+  &:hover {
+    border-bottom: 2px solid $color-white;
+  }
+
+  &__a {
+    list-style: none;
+    color: $color-white;
+    text-decoration: none;
+  }
+}
+
+.copyright {
+  float: right;
+  color: $color-dark-gray;
+}
+
+// ------ ATTRIBUTION ------ //
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding: 1rem 0;
+  letter-spacing: 0;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/////////////////////////////////
+// ------ MEDIA QUERIES ------ //
+/////////////////////////////////
+
+@media only screen and (max-width: 56.25em) {
+  // 900px
+
+  // ------ BASIC SETUP ------ //
+  html {
+    font-size: 80%;
+  }
+
+  // ------ SECTION INFO ------ //
+  .section-info {
+    &__textbox {
+      position: relative;
+      padding: 4rem 2rem 2rem 2rem;
+      height: auto;
+      max-width: 100%;
+      text-align: center;
+      right: 0;
+    }
+
+    &__paragraph {
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+    }
+  }
+
+  // ------ SECTION CREATIONS ------ //
+  .grid__text {
+    font-size: 1rem;
+    bottom: 2rem;
+    left: 2rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  // 600px
+
+  // ------ BASIC SETUP ------ //
+  html {
+    font-size: 50%;
+  }
+
+  .mobile {
+    display: inline-block !important;
+  }
+
+  .desktop {
+    display: none !important;
+  }
+
+  // ------ SECTION INFO ------ //
+  .section-info {
+    &__image {
+      text-align: center;
+    }
+  }
+
+  // ------ SECTION CREATIONS ------ //
+  .section-creations {
+    margin-bottom: 15rem;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .grid__text {
+    font-size: 2rem;
+    bottom: 3rem;
+    left: 3rem;
+  }
+
+  .btn {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    width: 106px;
+  }
+
+  // ------ MOBILE MENU ------ //
+  .nav-mobile {
+    background-color: $color-black;
+    height: 100vh;
+    padding-top: 5rem;
+
+    &__iconclose {
+      float: right;
+
+      & img {
+        width: 3rem;
+      }
+    }
+
+    &__li--text {
+      font-size: 4rem;
+      padding-bottom: 2rem;
+      list-style: none;
+
+      &:first-child {
+        margin-top: 15rem;
+      }
+    }
+
+    &__a {
+      text-decoration: none;
+      color: $color-white;
+    }
+  }
+
+  // ------ HEADER ------ //
+  .header {
+    background-image: url("../images/mobile/image-hero.jpg");
+
+    &__textbox {
+      max-width: 100%;
+    }
+  }
+
+  // ------ FOOTER ------ //
+  .footer {
+    text-align: center;
+  }
+
+  .footer-links {
+    display: block;
+    margin: 1.5rem 0rem;
+    font-size: 1.7rem;
+    border-bottom: 2px solid transparent;
+
+    &:hover {
+      border-bottom: 2px solid transparent;
+    }
+  }
+
+  .social-box {
+    padding: 2rem 0;
+    float: none;
+
+    &__icons {
+      margin-left: 2rem;
+    }
+  }
+
+  .copyright {
+    float: none;
+    color: $color-dark-gray;
+  }
+}
