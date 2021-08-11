@@ -150,18 +150,22 @@ body {
   padding: 3rem 0;
   background-color: black;
   color: white; }
+  .footer__logo {
+    padding-bottom: 2rem; }
 
-.social-box {
+.footer-logo-links {
+  display: inline-block; }
+
+.footer-social-copyright {
   float: right; }
-  .social-box__icons {
-    display: inline-block;
-    margin-left: 1rem;
-    border-bottom: 2px solid transparent;
-    padding-bottom: 0.3rem; }
 
-.footer-linksrow {
-  padding-top: 2rem;
-  font-size: 0.8rem; }
+.social-box__icons {
+  display: inline-block;
+  margin-left: 1.5rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid transparent; }
+  .social-box__icons:hover {
+    border-bottom: 2px solid white; }
 
 .footer-links {
   display: inline-block;
@@ -179,7 +183,7 @@ body {
     text-decoration: none; }
 
 .copyright {
-  float: right;
+  padding-top: 2rem;
   color: #8c8c8c; }
 
 .attribution {
@@ -207,7 +211,26 @@ body {
   .grid__text {
     font-size: 1rem;
     bottom: 2rem;
-    left: 2rem; } }
+    left: 2rem; }
+  .footer {
+    text-align: center; }
+  .footer-social-copyright {
+    float: none; }
+  .footer-links {
+    display: block;
+    margin: 1.5rem 0;
+    font-size: 1.7rem;
+    border-bottom: 2px solid transparent; }
+    .footer-links:hover {
+      border-bottom: 2px solid transparent; }
+  .social-box {
+    padding: 2rem 0 0 0;
+    float: none; }
+    .social-box__icons {
+      margin-left: 2rem; }
+  .copyright {
+    float: none;
+    color: #8c8c8c; } }
 
 @media only screen and (max-width: 37.5em) {
   html {
@@ -254,21 +277,4 @@ body {
   .header {
     background-image: url("../images/mobile/image-hero.jpg"); }
     .header__textbox {
-      max-width: 100%; }
-  .footer {
-    text-align: center; }
-  .footer-links {
-    display: block;
-    margin: 1.5rem 0rem;
-    font-size: 1.7rem;
-    border-bottom: 2px solid transparent; }
-    .footer-links:hover {
-      border-bottom: 2px solid transparent; }
-  .social-box {
-    padding: 2rem 0;
-    float: none; }
-    .social-box__icons {
-      margin-left: 2rem; }
-  .copyright {
-    float: none;
-    color: #8c8c8c; } }
+      max-width: 100%; } }
