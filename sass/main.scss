@@ -76,10 +76,7 @@ body {
 }
 
 .nav {
-  &__ul {
-    list-style: none;
-    overflow: hidden;
-  }
+  overflow: hidden;
 
   &__li {
     &--logo {
@@ -100,8 +97,8 @@ body {
     text-decoration: none;
     color: $color-white;
     margin-left: 1rem;
-    transition: all 0.5s;
     padding-bottom: 0.2rem;
+    transition: all 0.5s;
 
     &:hover {
       border-bottom: 2px solid $color-white;

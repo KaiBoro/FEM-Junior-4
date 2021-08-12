@@ -48,28 +48,23 @@ body {
     width: 35rem;
     padding: 2rem; }
 
-.nav__ul {
-  list-style: none;
+.nav {
   overflow: hidden; }
-
-.nav__li--logo {
-  float: left; }
-
-.nav__li--text {
-  display: inline-block;
-  margin-top: 0.5rem; }
-
-.nav__box {
-  float: right; }
-
-.nav__a {
-  text-decoration: none;
-  color: white;
-  margin-left: 1rem;
-  transition: all 0.5s;
-  padding-bottom: 0.2rem; }
-  .nav__a:hover {
-    border-bottom: 2px solid white; }
+  .nav__li--logo {
+    float: left; }
+  .nav__li--text {
+    display: inline-block;
+    margin-top: 0.5rem; }
+  .nav__box {
+    float: right; }
+  .nav__a {
+    text-decoration: none;
+    color: white;
+    margin-left: 1rem;
+    padding-bottom: 0.2rem;
+    transition: all 0.5s; }
+    .nav__a:hover {
+      border-bottom: 2px solid white; }
 
 .section-info {
   margin: 9rem 0; }
